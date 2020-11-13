@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://101.133.136.194:3306/hins?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 12315678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.hins.boot.entity

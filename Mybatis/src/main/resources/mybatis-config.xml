@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--  导入properties文件  -->
+    <properties resource="db01.properties"/>
+
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!--  配置java类别名  -->
+    <typeAliases>
+        <!--    具体到某类    -->
+        <typeAlias type="com.hins.pojo.Student" alias="student"/>
+        <!--     扫描包为包中所有类配置别名 默认为类名去除前缀   -->
+        <package name="com.hins.pojo"/>
+    </typeAliases>
+
+    <environments default="next">
+
+        <environment id="hins">
+            <transactionManager type="JDBC"/>
+            <!--      配置数据库连接信息      -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://101.133.136.194:3306/hins?
+                        useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="12315678"/>
+            </dataSource>
+        </environment>
+
+        <environment id="next">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+
+        <mapper resource="mappers/userMapper.xml"/>
+        <mapper resource="mappers/StudentMapper.xml"/>
+        <mapper resource="mappers/StudentsMapper.xml"/>
+        <mapper class="com.hins.dao.TeacherDao"/>
+        <mapper resource="mappers/BlogMapper.xml"/>
+    </mappers>
+
+</configuration>

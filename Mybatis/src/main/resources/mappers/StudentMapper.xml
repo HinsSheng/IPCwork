@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hins.dao.StudentDao">
+    <select id="selectone" parameterType="string" resultType="com.hins.pojo.Student">
+        select * from Student where sname = #{sname}
+    </select>
+    <select id="listStudentsLike" resultType="com.hins.pojo.Student" parameterType="string">
+        select * from Student where sname like "%"#{name}"%"
+    </select>
+    <select id="limitStudentSelect" resultType="student">
+        select * from Student limit 0,3
+    </select>
+
+</mapper>
