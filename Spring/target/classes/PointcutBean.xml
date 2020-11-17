@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd"
+>
+    <context:component-scan base-package="com.hins.entity"/>
+    <context:component-scan base-package="com.hins.dao"/>
+    <context:component-scan base-package="com.hins.service.impl"/>
+    <context:annotation-config/>
+    <!--  AOP相关  -->
+    <!--  添加自定义切入类  -->
+    <bean id="diy" class="com.hins.aop.AnyAopPointcut"/>
+    <!--  aop配置  -->
+    <aop:config>
+        <!--     使用aspect标签自定义配置   -->
+        <!--    ref指定切入类    -->
+        <aop:aspect ref="diy">
+            <!--   切入点  expression="execution = 切入点表达式"-->
+            <aop:pointcut id="diypointcut" expression="execution(* com.hins.service.FlowService.*(..))"/>
+            <!--配置通知类型及具体实现方式(方法)-->
+            <aop:before method="before" pointcut-ref="diypointcut"/>
+            <aop:after method="after" pointcut-ref="diypointcut"/>
+
+        </aop:aspect>
+    </aop:config>
+</beans>

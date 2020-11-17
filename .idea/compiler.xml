@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring" />
+        <module name="SpringMVC" />
+        <module name="lambda" />
+        <module name="Frame-Integrate" />
+        <module name="SSM-Frame" />
+        <module name="Mybatis" />
+        <module name="Boot" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="Boot" target="1.8" />
+      <module name="Frame-Integrate" target="1.8" />
+      <module name="IPCwork" target="1.8" />
+      <module name="lambda" target="1.8" />
+      <module name="Mybatis" target="1.8" />
+      <module name="Spring" target="1.8" />
+      <module name="SpringMVC" target="1.5" />
+      <module name="SSM-Frame" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Boot" options="-parameters" />
+      <module name="lambda" options="" />
+    </option>
+  </component>
+</project>

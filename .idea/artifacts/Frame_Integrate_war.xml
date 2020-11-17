@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Frame-Integrate:war">
+    <output-path>$PROJECT_DIR$/Frame-Integrate/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Frame-Integrate</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Frame-Integrate.war">
+      <element id="artifact" artifact-name="Frame-Integrate:war exploded" />
+    </root>
+  </artifact>
+</component>
