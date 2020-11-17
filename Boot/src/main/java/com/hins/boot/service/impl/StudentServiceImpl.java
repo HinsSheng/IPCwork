@@ -14,7 +14,7 @@ import java.util.List;
  * @author HinsChen
  */
 @Service
-public class StudentsImpl implements StudentService {
+public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentMapper studentMapper;
     @Override

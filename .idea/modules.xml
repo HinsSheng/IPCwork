@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/Frame-Integrate/Frame-Integrate.iml" filepath="$PROJECT_DIR$/Frame-Integrate/Frame-Integrate.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/IPCwork.iml" filepath="$PROJECT_DIR$/.idea/IPCwork.iml" />
       <module fileurl="file://$PROJECT_DIR$/Mybatis/Mybatis.iml" filepath="$PROJECT_DIR$/Mybatis/Mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SSM-Frame/SSM-Frame.iml" filepath="$PROJECT_DIR$/SSM-Frame/SSM-Frame.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
